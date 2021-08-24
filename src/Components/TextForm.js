@@ -45,12 +45,12 @@ export default function Navbar(props) {
             <div className="mb-3">
             <textarea className="form-control" id="myForm" value={text} style={{backgroundColor: props.mode==='black'?'black':'white',color:props.mode==='black'?'white':'black'}} onChange={handleOnChange} rows="8"></textarea>
             </div>
-            <button className="btn btn-primary mx-1" onClick={clickUpConvert}>conert to uppercase</button>
-            <button className="btn btn-primary mx-1" onClick={clickDownConvert}>conert to lowercase</button>
-            <button className="btn btn-primary mx-1" onClick={clickUniqueWords}>number of unique words</button>
-            <button className="btn btn-primary mx-1" onClick={copyText}>Copy Text</button>
-            <button className="btn btn-primary mx-1" onClick={handleExtraSpace}>Remove Extra Spaces</button>
-            <button className="btn btn-primary mx-1" onClick={clickClear}>clear text</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={clickUpConvert}>conert to uppercase</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={clickDownConvert}>conert to lowercase</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={clickUniqueWords}>number of unique words</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={copyText}>Copy Text</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpace}>Remove Extra Spaces</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={clickClear}>clear text</button>
         </div>
         <div className="container my-3" style={{color:props.mode==='black'?'white':'black'}}>
             <h2>Text Summary</h2>
