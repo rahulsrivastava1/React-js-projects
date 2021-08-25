@@ -17,9 +17,7 @@ export default function Navbar(props) {
     }
 
     const copyText=() => {
-        var newText=document.getElementById('myForm');
-        newText.select();
-        navigator.clipboard.writeText(newText.value);
+        navigator.clipboard.writeText(text);
         alert("Text copied");
     }
 
@@ -54,8 +52,8 @@ export default function Navbar(props) {
         </div>
         <div className="container my-3" style={{color:props.mode==='black'?'white':'black'}}>
             <h2>Text Summary</h2>
-            <p>{!text.match(/\S/)?0:text.split(" ").length} words and {text.length} characters.</p>
-            <p>{!text.match(/\S/)?0:0.008*text.split(" ").length} minutes time to read the text.</p>
+            <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters.</p>
+            <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length*0.008} minutes time to read the text.</p>
             <h3>Preview</h3>
             <p>{text.length>0?text:"Enter your text to preview"}</p>
         </div>
